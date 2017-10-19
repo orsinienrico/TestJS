@@ -19,6 +19,7 @@ Writing into the browser console, using console.log().
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="testCSS.css">
+<link rel="stylesheet" type="text/css" href="spinner.css">
 </head>
 <body>
 
@@ -125,6 +126,206 @@ document.getElementById("js_object").innerHTML = car.fullName();
 
 
 
+<!-- HTML Events
+
+An HTML event can be something the browser does, or something a user does.
+
+Here are some examples of HTML events:
+
+An HTML web page has finished loading
+An HTML input field was changed
+An HTML button was clicked
+Often, when events happen, you may want to do something.
+
+JavaScript lets you execute code when events are detected.
+
+HTML allows event handler attributes, with JavaScript code, to be added to HTML elements.
+
+Common HTML events:
+
+onchange	An HTML element has been changed
+onclick		The user clicks an HTML element
+onmouseover	The user moves the mouse over an HTML element
+onmouseout	The user moves the mouse away from an HTML element
+onkeydown	The user pushes a keyboard key
+onload		The browser has finished loading the page
+
+-->
+
+<div class="border_with_margin">
+	<button onclick="this.innerHTML = Date()">The time is?</button>
+</div>
+
+
+
+<!-- Javascripts conditions -->
+
+<div class="border_with_margin">
+	<p>Display "Good day!" if the hour is less than 18:00:</p>
+	<p id="demo_cond">Good Evening!</p>
+	<script>
+	if (new Date().getHours() < 18) {
+	    document.getElementById("demo_cond").innerHTML = "Good day!";
+	} else {
+		document.getElementById("demo_cond").innerHTML = "Good evening!";
+	}
+	</script>
+</div>
+
+
+<!-- JSON -->
+
+<h2>Create Object from JSON String</h2>
+<p id="demo_json"></p>
+
+<script>
+	var text = '{"employees":[' +
+	'{"firstName":"John","lastName":"Doe" },' +
+	'{"firstName":"Anna","lastName":"Smith" },' +
+	'{"firstName":"Peter","lastName":"Jones" }]}';
+
+	obj = JSON.parse(text);
+	document.getElementById("demo_json").innerHTML =
+	obj.employees[1].firstName + " " + obj.employees[1].lastName;
+</script>
+
+
+
+<!-- DOM
+
+When a web page is loaded, the browser creates a Document Object Model of the page.
+
+The HTML DOM model is constructed as a tree of Objects:
+
+The HTML DOM Tree of Objects
+DOM HTML tree
+With the object model, JavaScript gets all the power it needs to create dynamic HTML:
+
+JavaScript can change all the HTML elements in the page
+JavaScript can change all the HTML attributes in the page
+JavaScript can change all the CSS styles in the page
+JavaScript can remove existing HTML elements and attributes
+JavaScript can add new HTML elements and attributes
+JavaScript can react to all existing HTML events in the page
+JavaScript can create new HTML events in the page
+
+-->
+
+<!-- getElementsByTagName -->
+
+<div class="border_with_margin">
+	<p>Hello World!</p>
+
+	<p>The DOM is very useful.</p>
+	<p>This example demonstrates the <b>getElementsByTagName</b> method</p>
+
+	<p id="demo_tag"></p>
+
+	<script>
+	var x = document.getElementsByTagName("p");
+	document.getElementById("demo_tag").innerHTML = 'The first paragraph (index 0) is: ' + x[0].innerHTML;
+	</script>
+</div>
+
+
+
+<!-- getElementsByClassName -->
+
+<div class="border_with_margin">
+	<p class="testclass">Hello World!</p>
+	<p>The DOM is very useful.</p>
+	<p>This example demonstrates the <b>getElementsByClassName</b> method</p>
+
+	<p id="demo_tag1"></p>
+
+	<script>
+	var y = document.getElementsByClassName("testclass");
+	console.log(y);
+	document.getElementById("demo_tag1").innerHTML = 'The first paragraph (index 0) is: ' + y[0].innerHTML;
+	</script>
+</div>
+
+
+<!-- Change HTML style -->
+
+<p id="p1">Hello World!</p>
+<p id="p2">Hello World!</p>
+
+<script>
+document.getElementById("p2").style.color = "blue";
+document.getElementById("p2").style.fontFamily = "Arial";
+document.getElementById("p2").style.fontSize = "40px";
+</script>
+
+
+
+<h1 class="title",id"id1"> TEST </h1>
+<button type="button" onclick="document.getElementsByClassName('title')[0].style.color = 'red'"> Click Me!</button>
+
+
+
+<!-- ANIMATION -->
+	
+<p>
+<button onclick="myMove()">Click Me</button>
+</p> 
+
+<div id ="container">
+	<div id ="animate"></div>
+</div>
+
+<script>
+function myMove() {
+	var elem = document.getElementById("animate");   
+	var pos = 0;
+	var id = setInterval(frame, 10);
+
+	function frame() {
+		if (pos == 350) {
+			clearInterval(id);
+		} else {
+			pos++; 
+			elem.style.top = pos + 'px'; 
+			elem.style.left = pos + 'px'; 
+		}
+	}
+}
+</script>
+
+
+
+<h3 onclick="changeText(this)">Click on this text!</h3>
+
+<script>
+function changeText(id) {
+    id.innerHTML = "Ooops!";
+}
+</script>
+
+<div class="spinner"></div>
+
+
+<!--
+
+What is jQuery?
+jQuery is a lightweight, "write less, do more", JavaScript library.
+
+The purpose of jQuery is to make it much easier to use JavaScript on your website.
+
+jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, and wraps them into methods that you can call with a single line of code.
+
+jQuery also simplifies a lot of the complicated things from JavaScript, like AJAX calls and DOM manipulation.
+
+The jQuery library contains the following features:
+
+HTML/DOM manipulation
+CSS manipulation
+HTML event methods
+Effects and animations
+AJAX
+Utilities
+Tip: In addition, jQuery has plugins for almost any task out there.
+-->
 
 
 </body>
