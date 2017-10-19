@@ -1,0 +1,101 @@
+body {
+    background-color: lightblue;
+    /*background-image: url("image.png");*/
+    /*background-repeat: repeat-x;*/
+    /*background-repeat: no-repeat;*/
+}
+
+h1 {
+    color: navy; /* The color property is used to set the color of the text. With CSS, a color is most often specified by: a color name - like "red" a HEX value - like "#ff0000" an RGB value - like "rgb(255,0,0)"/*
+    /*background-color:DodgerBlue;*/
+    text-align: center;
+    text-decoration: line-through;
+    text-transform: capitalize;
+    letter-spacing: 3px;
+    font-family: "Courier", Times, serif;
+    font-size: 2.5em; /* 40px/16=2.5em */
+    background-color:rgb(255, 136, 0);
+    /*background-image: url("image.png");*/
+    border:2px solid blue;
+    margin-left: 20px;
+}
+
+
+div.border {
+    /*width:300px;*/
+    /*margin: auto; /*You can set the margin property to auto to horizontally center the element within its container.*/
+    border: 1px solid red;
+}
+
+div.border_with_margin {
+    margin-top: 15px;
+    border: 1px solid blue;
+}
+
+div.container1 {
+    border: 1px solid red;
+    margin-left: 2px; /* The CSS margin properties are used to generate space around elements. The margin properties set the size of the white space outside the border. */
+    padding-top: 2px; /* The CSS padding properties are used to generate space around content. The padding clears an area around the content (inside the border) of an element.*/ 
+    /*padding-left: 2px;*/
+
+    height: auto; /* The height and width properties are used to set the height and width of an element. The height and width can be set to auto (this is default. Means that the browser calculates the height and width), or be specified in length values, like px, cm, etc., or in percent (%) of the containing block. */
+    width: auto; 
+
+}
+
+p.one {
+    margin-left: inherit;
+}
+
+
+p.myborder {
+        border-left: 6px solid red;
+        background-color: lightgrey;
+        /*The CSS margin properties are used to generate space around elements.*/
+        margin-top: 100px;
+        margin-bottom: 100px;
+        margin-right: 150px;
+        margin-left: 80px;
+}
+
+p.dotted {
+        border-style: dotted;
+        border-width: 5px;
+        border-color: red;
+}
+
+p.dashed {border-style: dashed;}
+p.solid {border-style: solid;}
+p.double {border-style: double;}
+p.groove {border-style: groove;}
+p.ridge {border-style: ridge;}
+p.inset {border-style: inset;}
+p.outset {border-style: outset;}
+p.none {border-style: none;}
+p.hidden {border-style: hidden;}
+p.mix {border-style: dotted dashed solid double;}
+p.round {
+        border: 2px solid blue;
+        border-radius: 15px;
+
+}
+
+/* unvisited link */
+a:link {
+    color: red;
+}
+
+/* visited link */
+a:visited {
+    color: green;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+}

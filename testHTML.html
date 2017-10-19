@@ -1,0 +1,134 @@
+<!-- 
+HTML to define the content of web pages
+CSS to specify the layout of web pages
+JavaScript to program the behavior of web pages
+-->
+
+
+<!--
+JavaScript can "display" data in different ways:
+Writing into an HTML element, using innerHTML.
+Writing into the HTML output using document.write().
+Writing into an alert box, using window.alert().
+Writing into the browser console, using console.log().
+-->
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="testCSS.css">
+</head>
+<body>
+
+<h1>This is a heading</h1>
+
+<p>This is a paragraph.</p>
+<p class="dotted">A dotted border</p>
+<p class="myborder">My border</p>
+<p class="round">Round</p>
+
+<div class="border">
+	Centered div with auto margin property
+</div>
+
+
+<div class="container">
+	<p class="one">This is a paragraph with an inherited left margin (from the div element).</p>
+</div>
+
+<div>
+	<p><a href="default.asp" target="_blank">This is a link</a></p>
+</div>
+
+
+<div class="border">
+	<!-- Javascript sample -->
+	<p id="demo">JavaScript can change HTML content</p>
+	<button type="button" onclick='document.getElementById("demo").innerHTML="Hello JavaScript!"'>Click Me!</button>
+</div>
+
+
+<p id="javascript_test_1"></p>
+
+<script>
+var x, y, z;
+x = 5;
+y = 6;
+z = x + y;
+document.getElementById("javascript_test_1").innerHTML = z;
+/*window.alert(5 + 6);*/
+/*console.log(5 + 6);*/
+</script>
+
+
+
+<!-- Javascript datatype -->
+
+<!--
+var length = 16;                               // Number
+var lastName = "Johnson";                      // String
+var x = {firstName:"John", lastName:"Doe"};    // Object
+
+var a;               // Now x is undefined
+var a = 5;           // Now x is a Number
+var a = "John";      // Now x is a String
+
+var cars = ["Saab", "Volvo", "BMW"]; // array	
+
+var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"}; // object
+
+typeof "John"              // Returns "string" 
+typeof 3.14                // Returns "number"
+typeof true                // Returns "boolean"
+typeof false               // Returns "boolean"
+typeof x                   // Returns "undefined" (if x has no value)
+typeof {name:'John', age:34} // Returns "object"
+typeof [1,2,3,4]             // Returns "object" (not "array", see note below)
+typeof null                  // Returns "object"
+typeof function myFunc(){}   // Returns "function"
+
+-->
+
+
+<div class="border">
+		<p id="test_JS_function">JavaScript function</p>
+		<button type="button" onclick='myFunction(1,2)'>Invoke Function!</button>
+	</div>
+
+
+<script>
+	function myFunction(p1, p2) {
+		document.getElementById("test_JS_function").innerHTML = p1*p2;
+	}
+</script>
+
+
+<div class="border_with_margin">
+<p>Creating a JavaScript Object.</p>
+<p id="js_object"></p>
+</div>
+
+<script>
+var car = {
+	type:"Fiat",
+	model:"500", 
+	color:"white",
+	fullName : function() {
+       return this.type + " " + this.model;
+    }
+};
+
+document.getElementById("js_object").innerHTML = car.fullName();
+</script>
+
+
+
+
+
+</body>
+</html>
+
+
+
